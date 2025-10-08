@@ -12,10 +12,14 @@ export const FilterSidebar = () => {
   const handleSizeChange = (size: string) => {
     const newSizes = currentSizes.includes(size)
     ? currentSizes.filter(s => s != size)
-    : [...currentSizes, size]
+    : [...currentSizes, size];
 
     searchParams.set('page', '1');
-    searchParams.set('sizes', newSizes.join(','));
+    
+    if (newSizes. length > 0)
+      searchParams.set('sizes', newSizes.join(','));
+    else
+      searchParams.delete('sizes')
     setSearchParams(searchParams);
   }
 
