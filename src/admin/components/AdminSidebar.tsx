@@ -1,13 +1,7 @@
 import React from 'react';
 import { 
   Home, 
-  Users, 
   BarChart3, 
-  Settings, 
-  FileText, 
-  ShoppingCart, 
-  Bell, 
-  HelpCircle,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
@@ -25,13 +19,7 @@ export const AdminSidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) 
   const {pathname} = useLocation();
   const menuItems = [
     { icon: Home, label: 'Dashboard', to: '/admin'},
-    { icon: BarChart3, label: 'Productos', to: '/admin/products' },
-    { icon: Users, label: 'Usuarios' },
-    { icon: ShoppingCart, label: 'Ordenes' },
-    { icon: FileText, label: 'Reportes' },
-    { icon: Bell, label: 'Notificaciones' },
-    { icon: Settings, label: 'Configuraciones' },
-    { icon: HelpCircle, label: 'Ayuda' },
+    { icon: BarChart3, label: 'Productos', to: '/admin/products' }
   ];
   const isActiveRoute = (to: string) => {
     if(pathname.includes('/admin/products/') && to =='/admin/products'){
