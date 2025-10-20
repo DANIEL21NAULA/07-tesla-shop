@@ -12,7 +12,7 @@ export const CustomHeader = () => {
   const { authStatus, isAdmin, logout } = useAuthStore();
   const { gender } = useParams();
   const queryInput = searchParams.get('query') || '';
-  console.log(gender);
+  
   const inputRef = useRef<HTMLInputElement>(null)
   
   const handleSeachInput = (event: KeyboardEvent<HTMLInputElement>) => {

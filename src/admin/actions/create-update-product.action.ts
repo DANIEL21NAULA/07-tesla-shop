@@ -6,10 +6,7 @@ export const createUpdateProductAction = async(productLike: Partial<Product> & {
   await sleep(5000);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { id, user, images = [], files = [], ...rest } = productLike;
-  console.log({
-      'algo':'handle action',
-      productLike
-    });
+  
   const isCreating = id == 'new';
   rest.stock = Number(rest.stock || 0);
   rest.price = Number(rest.price || 0);

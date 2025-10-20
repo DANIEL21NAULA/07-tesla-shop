@@ -114,7 +114,7 @@ export const AdminProductForm = ({title, subTitle, isPending, product, onSubmit}
     e.stopPropagation();
     setDragActive(false);
     const files = e.dataTransfer.files;
-    console.log(files);
+    
     if(!files) return;
 
     setFiles( prev => [...prev, ...Array.from(files)]);
