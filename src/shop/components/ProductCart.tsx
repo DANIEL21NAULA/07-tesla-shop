@@ -13,7 +13,7 @@ interface ProductCardProps {
 
 export const ProductCard = ({ id, name, price, image, category, sizes }: ProductCardProps) => {
   return (
-    <Card className="group border-0 shadow-none product-card-hover cursor-pointer">
+    <Card className="group border-0 shadow-none product-card-hover cursor-pointer" key={id}>
       <CardContent className="p-0">
         <div className="relative aspect-square overflow-hidden bg-muted rounded-lg">
           <img
